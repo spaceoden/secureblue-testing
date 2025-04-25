@@ -1,0 +1,9 @@
+screens:
+  can-we-harden-your-kargs:
+    source: yafti.screen.consent
+    values:
+      title: Kernel arguments hardening
+      description: |
+        This step will enable hardening for kernel arguments.
+      actions:
+        - run: ujust set-kargs-hardening non-interactive
