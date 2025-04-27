@@ -17,7 +17,7 @@ screens:
       description: |
         This step will enable hardening for kernel arguments.
       actions:
-        - run: ujust set-kargs-hardening non-interactive
+        - run: ujust set-kargs-hardening-testing non-interactive
 
   final-screen:
     source: yafti.screen.title
