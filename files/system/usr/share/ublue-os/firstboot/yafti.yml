@@ -10,7 +10,6 @@ screens:
       description: |
         This guided installer will help you get started with your new system.
 
-screens:
   can-we-harden-your-kargs:
     source: yafti.screen.consent
     values:
