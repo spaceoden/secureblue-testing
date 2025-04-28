@@ -12,6 +12,9 @@ image-version: latest # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
+  - type: gschema-overrides
+    include:
+    - zz1-space.gschema.override # test & compile specific override file included in files/gschema-overrides/zz1-myoverride.gschema.override
   - type: files
     files:
       - source: system
