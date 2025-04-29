@@ -112,7 +112,7 @@ toggle-mac-randomization-test:
     fi
 
 # setup system DNS resolution
-dns-selector:
+dns-selector-testing:
     #! /bin/run0 /bin/bash
     # constants
     readonly resolved_conf="/etc/systemd/resolved.conf.d/10-securedns.conf"
