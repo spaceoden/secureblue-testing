@@ -103,7 +103,7 @@ toggle-mac-randomization-test:
 
         cp /usr$RAND_MAC_FILE $RAND_MAC_FILE
         if [[ "$randomization_choice" == [Yy]* ]]; then
-            sed 's/wifi.cloned-mac-address=stable/wifi.cloned-mac-address=random/g' $RAND_MAC_FILE
+            sed -n 's/wifi.cloned-mac-address=stable/wifi.cloned-mac-address=random/g' $RAND_MAC_FILE
             echo "Per-connection MAC randomization enabled."
         else
             echo "Stable MAC randomization enabled."
