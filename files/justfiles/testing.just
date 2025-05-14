@@ -3,11 +3,11 @@ toggle-gnome-thumbnailer:
     #!/usr/bin/bash
     set -euo pipefail
     GSETTING="org.gnome.desktop.thumbnailers disable-all"
-    if $(gsettings get $GSETTING); then
-      gsettings set $GSETTING false
+    if $(command -p gsettings get $GSETTING); then
+      command -p gsettings set $GSETTING false
       echo "The GNOME thumbnailer is now enabled"
     else
-      gsettings set $GSETTING true
+      command -p gsettings set $GSETTING true
       echo "The GNOME thumbnailer is now disabled"
     fi
 
@@ -16,11 +16,11 @@ toggle-gnome-extensions-testing:
     #!/usr/bin/bash
     set -euo pipefail
     GSETTING="org.gnome.shell allow-extension-installation"
-    if $(gsettings get $GSETTING); then
-      gsettings reset $GSETTING
+    if $(command -p gsettings get $GSETTING); then
+      command -p gsettings reset $GSETTING
       echo "Support for GNOME user extensions is now disabled"
     else
-      gsettings set $GSETTING true
+      command -p gsettings set $GSETTING true
       echo "Support for GNOME user extensions is now enabled"
     fi
 
