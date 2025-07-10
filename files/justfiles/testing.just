@@ -16,3 +16,16 @@ toggle-kde-thumbnailer-testing:
     #!/usr/bin/bash
     set -euo pipefail
     echo 'wip'
+
+# Toggle support for using GNOME user extensions
+toggle-gnome-extensions-testing:
+    #!/usr/bin/bash
+    set -euo pipefail
+    GSETTING="$(command -p gsettings get org.gnome.shell allow-extension-installation)"
+    if [[ "${GSETTING}" == "false" ]]; then
+      command -p gsettings set org.gnome.shell allow-extension-installation true
+      echo "Support for GNOME user extensions have been enabled"
+    else
+      command -p gsettings set org.gnome.shell allow-extension-installation false
+      echo "Support for GNOME user extensions have been disabled"
+    fi
