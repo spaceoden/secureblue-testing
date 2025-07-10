@@ -6,7 +6,7 @@ toggle-gnome-thumbnailer-testing:
     if [[ "$GSETTING" == "true" ]]; then
       command -p gsettings set org.gnome.desktop.thumbnailers disable-all false
       echo "The GNOME thumbnailer is now enabled"
-    else
+    elif [[ "${GSETTING}" == "false" ]]; then
       command -p gsettings set org.gnome.desktop.thumbnailers disable-all true
       echo "The GNOME thumbnailer is now disabled"
     fi
